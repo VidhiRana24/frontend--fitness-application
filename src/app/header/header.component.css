@@ -1,0 +1,62 @@
+/* CSS for Sign Up Button */
+.main-nav .navbar-nav {
+  margin-left: auto;
+  background-color: white;
+  padding: 2%;
+}
+
+.main-nav .navbar-nav .nav-item {
+  margin-left: 15px; /* Adjust spacing between links */
+}
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: white;
+  --bs-light-rgb: white;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  position: relative;
+  margin: 20px;
+  min-width: 992px;
+  left: 70cap;
+}
+.main-nav .navbar-nav .btn {
+  margin-left: 15px; /* Adjust spacing between links and button */
+}
+
+/* CSS for Navbar Links */
+.navbar-nav .nav-link {
+  line-height: 40px; /* Adjust line height */
+}
+
+/* CSS for Sign Up Button */
+.navbar-nav .btn-signup {
+  margin-left: auto;
+  line-height: 40px; /* Adjust line height */
+}
+
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 17px;
+}
+.header-area {
+  height: 100px; /* Adjust the height as needed */
+}
+
+.main-nav .btn-danger {
+  margin-left: 10px; /* Adjust the margin as needed */
+  padding: 8px 20px; /* Adjust the padding as needed */
+  border-radius: 20px; /* Adjust the border radius as needed */
+}
+
+.main-nav .navbar-nav {
+  margin-left: 50%;
+}
+.collapse navbar-collapse {
+  margin-right: 40px;
+}

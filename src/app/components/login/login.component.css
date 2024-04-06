@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 800%;
+}
+submit:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+  width: 100%;
+  padding: 1%;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+  width: 400px;
+}
+.forget-password {
+  margin-left: 89px;
+}

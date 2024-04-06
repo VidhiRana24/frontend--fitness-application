@@ -1,0 +1,98 @@
+/* Remove dot in front of images */
+.features-items .feature-item .left-icon {
+  list-style: none;
+}
+.container {
+  padding: 2%;
+}
+section {
+  padding: 0;
+}
+/* Style for call-to-action section */
+#call-to-action {
+  position: relative;
+  text-align: center;
+}
+
+/* Style for background image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Style for call-to-action content */
+.cta-content {
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.cta-content h2 {
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  margin-bottom: 30px;
+}
+
+/* Style for main button */
+.main-button {
+  margin-top: 30px;
+}
+
+.main-button a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Style for main button hover */
+.main-button a:hover {
+  color: #ffcc00;
+}
+.features-items .feature-item .left-icon {
+  list-style: none; /* Hide default marker */
+}
+.red-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.red-button:hover {
+  background-color: darkred;
+  width: 200px;
+  text-align: center;
+}
+
+.h2,
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+  margin: 8%;
+}
+.red-button[_ngcontent-ng-c1016867636] {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  width: fit-content;
+  margin-left: 450px;
+}
+.red-button[_ngcontent-ng-c88125933] {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  width: fit-content;
+  margin-left: 420px;
+}

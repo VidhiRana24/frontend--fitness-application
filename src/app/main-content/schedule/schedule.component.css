@@ -1,0 +1,19 @@
+.schedule-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container,
+.container-lg,
+.container-md,
+.container-sm {
+  max-width: 960px;
+  padding: 5%;
+}

@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Login</h5>
+      <form [formGroup]="loginForm">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            formControlName="email"
+            placeholder="Type your email here"
+          />
+          <app-error
+            [control]="this.loginForm.get('email')"
+            controlErr="required"
+            errorMsg="Email is required"
+          ></app-error>
+          <app-error
+            *ngIf="
+              !this.loginForm.get('email')?.hasError('required') &&
+              this.loginForm.get('email')?.touched
+            "
+            [control]="this.loginForm.get('email')"
+            controlErr="email"
+            errorMsg="Email is invalid"
+          />
+          <!-- <small
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            style="color: red"
+          >
+            <div *ngIf="email.errors?.['required']">Email is required</div>
+            <div *ngIf="email.errors?.['email']">Email should be valid</div>
+          </small> -->
+          <!-- <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div> -->
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            formControlName="password"
+            placeholder="Type your password here"
+          />
+          <app-error
+            [control]="this.loginForm.get('password')"
+            controlErr="required"
+            errorMsg="Password is required"
+          ></app-error>
+          <!-- <small
+            *ngIf="password.invalid && (password.dirty || password.touched)"
+            style="color: red"
+          >
+            <div *ngIf="password.errors?.['required']">
+              Password is required
+            </div>
+          </small> -->
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Remember me</label
+          >
+          <a class="forget-password" routerLink="/forgot-password"
+            >Forgot Password?</a
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="loginForm.invalid"
+          style="width: 100%"
+        >
+          SIGN IN
+        </button>
+      </form>
+      <!-- Additional Login Options -->
+      <hr />
+      <!-- Optional horizontal line for visual separation -->
+      <div class="text-center">
+        <p>Or continue with :</p>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+
+        <div class="mt-2">
+          Not a member? <a routerLink="/register"> Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
