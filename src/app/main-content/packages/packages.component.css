@@ -2,9 +2,7 @@
 .features-items .feature-item .left-icon {
   list-style: none;
 }
-.container {
-  padding: 2%;
-}
+
 section {
   padding: 0;
 }
@@ -59,13 +57,6 @@ section {
 .features-items .feature-item .left-icon {
   list-style: none; /* Hide default marker */
 }
-.red-button {
-  background-color: red;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-}
 
 .red-button:hover {
   background-color: darkred;
@@ -73,26 +64,35 @@ section {
   text-align: center;
 }
 
-.h2,
-h2 {
+.h2 {
   font-size: calc(1.325rem + 0.9vw);
   margin: 8%;
 }
-.red-button[_ngcontent-ng-c1016867636] {
-  background-color: red;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  width: fit-content;
-  margin-left: 450px;
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 5px;
 }
-.red-button[_ngcontent-ng-c88125933] {
+.container[_ngcontent-ng-c3326064738] {
+  padding: 34px;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  padding: 20px;
+}
+.red-button[_ngcontent-ng-c3032182882] {
   background-color: red;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   width: fit-content;
-  margin-left: 420px;
+  margin-left: 40%;
 }

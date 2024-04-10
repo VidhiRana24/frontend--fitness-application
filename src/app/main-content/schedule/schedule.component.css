@@ -17,3 +17,25 @@
   max-width: 960px;
   padding: 5%;
 }
+.day-links {
+  display: flex;
+  gap: 20px; /* Adjust the spacing between links */
+}
+
+.day-links span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.day-links[_ngcontent-ng-c2291941077] {
+  display: flex;
+  gap: 20px;
+  color: orange;
+  margin-left: 100px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 20px;
+}

@@ -1,135 +1,137 @@
 <!-- ***** Our Classes Start ***** -->
-<section class="section" id="our-classes">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-3">
-        <div class="section-heading text-center">
-          <h2>Our <em>Classes</em></h2>
-          <img src="assets/images/line-dec.png" alt="" />
-          <p>
-            Transform your fitness journey with our dynamic range of fitness
-            classes designed to challenge, motivate, and elevate your workout
-            experience.
-          </p>
+<div class="container">
+  <section class="section" id="our-classes">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading text-center">
+            <h2>Our <em>Classes</em></h2>
+            <img src="assets/images/line-dec.png" alt="" />
+            <p>
+              Transform your fitness journey with our dynamic range of fitness
+              classes designed to challenge, motivate, and elevate your workout
+              experience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Left Column: Training Classes -->
+        <div class="col-lg-4">
+          <div class="card">
+            <ul class="list-unstyled">
+              <li>
+                <a (click)="showImage('tabs-1')" class="nav-link">
+                  <img src="assets/images/tabs-first-icon.png" alt="" />Muscle
+                  Building
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul class="list-unstyled">
+              <li>
+                <a (click)="showImage('tabs-2')" class="nav-link">
+                  <img src="assets/images/tabs-first-icon.png" alt="" />Yoga
+                  Classes
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul class="list-unstyled">
+              <li>
+                <a (click)="showImage('tabs-3')" class="nav-link">
+                  <img src="assets/images/tabs-first-icon.png" alt="" />Cardio
+                  Workouts
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul class="list-unstyled">
+              <li>
+                <a (click)="showImage('tabs-4')" class="nav-link">
+                  <img src="assets/images/tabs-first-icon.png" alt="" />Zumba
+                  Classes
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-primary btn-block mt-3">View Schedule</button>
+        </div>
+        <!-- Right Column: Images and Details -->
+        <div class="col-lg-8">
+          <section class="tabs-content">
+            <article
+              *ngIf="selectedClass === 'tabs-1' || !selectedClass"
+              id="tabs-1"
+            >
+              <img
+                src="assets/images/muscle.jpg"
+                alt="First Class"
+                class="img-fluid"
+              />
+              <h4>Muscle Building</h4>
+              <p>
+                Transform your physique and join our muscle building classes
+                now!
+              </p>
+              <div class="main-button">
+                <a href="#">View Schedule</a>
+              </div>
+            </article>
+            <article *ngIf="selectedClass === 'tabs-2'" id="tabs-2">
+              <img
+                src="assets/images/yoga.jpg"
+                alt="Second Training Class"
+                class="img-fluid"
+              />
+              <h4>Yoga Classes</h4>
+              <p>
+                Transform your body and mind - Join our invigorating Yoga
+                classes now!
+              </p>
+              <div class="main-button">
+                <a href="#">View Schedule</a>
+              </div>
+            </article>
+            <article *ngIf="selectedClass === 'tabs-3'" id="tabs-3">
+              <img
+                src="assets/images/cardio.jpg"
+                alt="Third Training Class"
+                class="img-fluid"
+              />
+              <h4>Cardio Workout</h4>
+              <p>
+                Join now for invigorating cardio workouts and elevate your
+                fitness journey!
+              </p>
+              <div class="main-button">
+                <a href="#">View Schedule</a>
+              </div>
+            </article>
+            <article *ngIf="selectedClass === 'tabs-4'" id="tabs-4">
+              <img
+                src="assets/images/zumba.jpg"
+                alt="Fourth Training Class"
+                class="img-fluid"
+              />
+              <h4>Zumba Classes</h4>
+              <p>
+                Join now and dance your way to fitness with our vibrant Zumba
+                classes!
+              </p>
+              <div class="main-button">
+                <a href="#">View Schedule</a>
+              </div>
+            </article>
+          </section>
         </div>
       </div>
     </div>
-    <div class="row">
-      <!-- Left Column: Training Classes -->
-      <div class="col-lg-4">
-        <div class="card">
-          <ul class="list-unstyled">
-            <li>
-              <a (click)="showImage('tabs-1')" class="nav-link">
-                <img src="assets/images/tabs-first-icon.png" alt="" />Muscle
-                Building
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="card">
-          <ul class="list-unstyled">
-            <li>
-              <a (click)="showImage('tabs-2')" class="nav-link">
-                <img src="assets/images/tabs-first-icon.png" alt="" />Yoga
-                Classes
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="card">
-          <ul class="list-unstyled">
-            <li>
-              <a (click)="showImage('tabs-3')" class="nav-link">
-                <img src="assets/images/tabs-first-icon.png" alt="" />Cardio
-                Workouts
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="card">
-          <ul class="list-unstyled">
-            <li>
-              <a (click)="showImage('tabs-4')" class="nav-link">
-                <img src="assets/images/tabs-first-icon.png" alt="" />Zumba
-                Classes
-              </a>
-            </li>
-          </ul>
-        </div>
-        <button class="btn btn-primary btn-block mt-3">View Schedule</button>
-      </div>
-      <!-- Right Column: Images and Details -->
-      <div class="col-lg-8">
-        <section class="tabs-content">
-          <article
-            *ngIf="selectedClass === 'tabs-1' || !selectedClass"
-            id="tabs-1"
-          >
-            <img
-              src="assets/images/muscle.jpg"
-              alt="First Class"
-              class="img-fluid"
-            />
-            <h4>Muscle Building</h4>
-            <p>
-              Transform your physique and join our muscle building classes now!
-            </p>
-            <div class="main-button">
-              <a href="#">View Schedule</a>
-            </div>
-          </article>
-          <article *ngIf="selectedClass === 'tabs-2'" id="tabs-2">
-            <img
-              src="assets/images/yoga.jpg"
-              alt="Second Training Class"
-              class="img-fluid"
-            />
-            <h4>Yoga Classes</h4>
-            <p>
-              Transform your body and mind - Join our invigorating Yoga classes
-              now!
-            </p>
-            <div class="main-button">
-              <a href="#">View Schedule</a>
-            </div>
-          </article>
-          <article *ngIf="selectedClass === 'tabs-3'" id="tabs-3">
-            <img
-              src="assets/images/cardio.jpg"
-              alt="Third Training Class"
-              class="img-fluid"
-            />
-            <h4>Cardio Workout</h4>
-            <p>
-              Join now for invigorating cardio workouts and elevate your fitness
-              journey!
-            </p>
-            <div class="main-button">
-              <a href="#">View Schedule</a>
-            </div>
-          </article>
-          <article *ngIf="selectedClass === 'tabs-4'" id="tabs-4">
-            <img
-              src="assets/images/zumba.jpg"
-              alt="Fourth Training Class"
-              class="img-fluid"
-            />
-            <h4>Zumba Classes</h4>
-            <p>
-              Join now and dance your way to fitness with our vibrant Zumba
-              classes!
-            </p>
-            <div class="main-button">
-              <a href="#">View Schedule</a>
-            </div>
-          </article>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
+</div>
 <section>
   <app-schedule></app-schedule>
 </section>

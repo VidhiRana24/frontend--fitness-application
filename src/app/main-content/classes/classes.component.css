@@ -79,3 +79,14 @@ user agent stylesheet section {
 .row {
   padding: 1%;
 }
+.day-links[_ngcontent-ng-c2291941077] {
+  display: flex;
+  gap: 20px;
+  color: wheat;
+}
+*[_ngcontent-ng-c1443117620],
+[_ngcontent-ng-c1443117620]::after,
+[_ngcontent-ng-c1443117620]::before {
+  box-sizing: border-box;
+  padding: 1px;
+}

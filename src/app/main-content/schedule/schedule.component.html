@@ -16,39 +16,29 @@
   <div class="container" style="position: relative">
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
-        <div class="section-heading dark-bg">
+        <div class="section-heading text-center">
           <h2 style="color: white">Classes <em>Schedule</em></h2>
           <img src="assets/images/line-dec.png" alt="" />
-          <p style="color: white">
-            Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed
-            viverra ipsum dolor, ultricies fermentum massa consequat eu.
-          </p>
         </div>
       </div>
+      <p style="color: white">
+        Special Offer: Join Now and Get Started! Don't wait any longer to invest
+        in your health and well-being. Sign up for a membership today and take
+        the first step toward a healthier, happier you. Plus, for a limited
+        time, new members receive exclusive discounts and bonuses!
+      </p>
     </div>
     <div class="row">
       <div class="col-lg-12">
         <div class="filters" style="color: black">
           <div class="schedule-filter">
-            <a
-              class="active"
-              data-tsfilter="monday"
-              href="#"
-              style="color: white"
-              >Monday</a
-            >
-            <span class="separator" style="color: white"> / </span>
-            <a data-tsfilter="tuesday" href="#" style="color: white">Tuesday</a>
-            <span class="separator" style="color: white"> / </span>
-            <a data-tsfilter="wednesday" href="#" style="color: white"
-              >Wednesday</a
-            >
-            <span class="separator" style="color: white"> / </span>
-            <a data-tsfilter="thursday" href="#" style="color: white"
-              >Thursday</a
-            >
-            <span class="separator" style="color: white"> / </span>
-            <a data-tsfilter="friday" href="#" style="color: white">Friday</a>
+            <div class="day-links">
+              <span (click)="setSelectedDay('Monday')">Monday</span>
+              <span (click)="setSelectedDay('Tuesday')">Tuesday</span>
+              <span (click)="setSelectedDay('Wednesday')">Wednesday</span>
+              <span (click)="setSelectedDay('Thursday')">Thursday</span>
+              <span (click)="setSelectedDay('Friday')">Friday</span>
+            </div>
           </div>
         </div>
       </div>
@@ -59,80 +49,24 @@
           <thead>
             <tr>
               <th>Class</th>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
+              <th>Time</th>
+              <th>Instructor</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="day-time">Fitness Class</td>
-              <td class="monday ts-item show" data-tsmeta="monday">
-                10:00AM - 11:30AM
-              </td>
-              <td class="tuesday ts-item" data-tsmeta="tuesday">
-                2:00PM - 3:30PM
-              </td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>William G. Stewart</td>
+            <!-- Loop through schedule data and filter based on selected day -->
+            <tr *ngFor="let class of schedule">
+              <ng-container
+                *ngIf="!selectedDay || class.days.includes(selectedDay)"
+              >
+                <td>{{ class.name }}</td>
+                <td>{{ class.time }}</td>
+                <td>
+                  {{ getInstructorForClass(class.name) }}
+                </td>
+                <!-- Display other class details as needed -->
+              </ng-container>
             </tr>
-            <tr>
-              <td class="day-time">Muscle Training</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="thursday ts-item" data-tsmeta="thursday">
-                10:00AM - 11:30AM
-              </td>
-              <td class="friday ts-item" data-tsmeta="friday">
-                10:00AM - 11:30AM
-              </td>
-              <td>Paul D. Newman</td>
-            </tr>
-            <tr>
-              <td class="day-time">Body Building</td>
-              <td class="monday ts-item show" data-tsmeta="monday">
-                2:00PM - 3:30PM
-              </td>
-              <td class="tuesday ts-item" data-tsmeta="tuesday">
-                10:00AM - 11:30AM
-              </td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>Boyd C. Harris</td>
-            </tr>
-            <tr>
-              <td class="day-time">Yoga Training Class</td>
-              <td></td>
-              <td></td>
-              <td class="wednesday ts-item" data-tsmeta="wednesday">
-                10:00AM - 11:30AM
-              </td>
-              <td></td>
-              <td class="friday ts-item" data-tsmeta="friday">
-                2:00PM - 3:30PM
-              </td>
-              <td>Hector T. Daigle</td>
-            </tr>
-            <tr>
-              <td class="day-time">Advanced Training</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="thursday ts-item" data-tsmeta="thursday">
-                10:00AM - 11:30AM
-              </td>
-              <td class="wednesday ts-item" data-tsmeta="wednesday">
-                2:00PM - 3:30PM
-              </td>
-              <td>Bret D. Bowers</td>
-            </tr>
-            <!-- Add more rows for other classes -->
           </tbody>
         </table>
       </div>

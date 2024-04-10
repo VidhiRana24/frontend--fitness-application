@@ -1,117 +1,124 @@
-<div class="container">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Register</h5>
-      <form [formGroup]="registerForm">
-        <div class="mb-3">
-          <label for="exampleInputfullName" class="form-label">Full Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="exampleInputfullName"
-            aria-describedby="fullNameHelp"
-            formControlName="fullName"
-            placeholder="Type your name here"
-          />
-          <app-error
-            [control]="this.registerForm.get('fullName')"
-            controlErr="required"
-            errorMsg="Fullname is required"
-          />
-          <app-error
-            [control]="this.registerForm.get('fullName')"
-            controlErr="pattern"
-            errorMsg="Fullname must contain only characters"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            formControlName="email"
-            placeholder="Type your email here"
-          />
-          <app-error
-            [control]="this.registerForm.get('email')"
-            controlErr="required"
-            errorMsg="Email is required"
-          />
-          <app-error
-            *ngIf="
-              !this.registerForm.get('email')?.hasError('required') &&
-              this.registerForm.get('email')?.touched
-            "
-            [control]="this.registerForm.get('email')"
-            controlErr="email"
-            errorMsg="Email is invalid"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-            formControlName="password"
-            placeholder="Type your password here"
-          />
-          <app-error
-            [control]="this.registerForm.get('password')"
-            controlErr="required"
-            errorMsg="Password is required"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputconfirmPassword1" class="form-label"
-            >Confirm Password</label
-          >
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputconfirmPassword1"
-            formControlName="confirmPassword"
-            placeholder="Confirm Password"
-          />
-          <small
-            *ngIf="
-              confirmPassword.invalid &&
-              (confirmPassword.dirty || confirmPassword.touched)
-            "
-            style="color: red"
-          >
-            <div *ngIf="confirmPassword.errors?.['required']">
-              Confirm the password
-            </div>
-          </small>
-          <small
-            style="color: red"
-            class="block p-error"
-            *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid"
-          >
-            Password should match</small
-          >
-        </div>
+<div class="overlay" *ngIf="showOverlay">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Register</h5>
+        <form [formGroup]="registerForm">
+          <div class="mb-3">
+            <label for="exampleInputfullName" class="form-label"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputfullName"
+              aria-describedby="fullNameHelp"
+              formControlName="fullName"
+              placeholder="Type your name here"
+            />
+            <app-error
+              [control]="this.registerForm.get('fullName')"
+              controlErr="required"
+              errorMsg="Fullname is required"
+            />
+            <app-error
+              [control]="this.registerForm.get('fullName')"
+              controlErr="pattern"
+              errorMsg="Fullname must contain only characters"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              formControlName="email"
+              placeholder="Type your email here"
+            />
+            <app-error
+              [control]="this.registerForm.get('email')"
+              controlErr="required"
+              errorMsg="Email is required"
+            />
+            <app-error
+              *ngIf="
+                !this.registerForm.get('email')?.hasError('required') &&
+                this.registerForm.get('email')?.touched
+              "
+              [control]="this.registerForm.get('email')"
+              controlErr="email"
+              errorMsg="Email is invalid"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              formControlName="password"
+              placeholder="Type your password here"
+            />
+            <app-error
+              [control]="this.registerForm.get('password')"
+              controlErr="required"
+              errorMsg="Password is required"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputconfirmPassword1" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputconfirmPassword1"
+              formControlName="confirmPassword"
+              placeholder="Confirm Password"
+            />
+            <small
+              *ngIf="
+                confirmPassword.invalid &&
+                (confirmPassword.dirty || confirmPassword.touched)
+              "
+              style="color: red"
+            >
+              <div *ngIf="confirmPassword.errors?.['required']">
+                Confirm the password
+              </div>
+            </small>
+            <small
+              style="color: red"
+              class="block p-error"
+              *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid"
+            >
+              Password should match</small
+            >
+          </div>
 
-        <button
-          type="submit"
-          class="btn btn-primary"
-          style="width: 100%"
-          [disabled]="registerForm.invalid"
-        >
-          Register
-        </button>
-      </form>
-      <!-- Additional Login Options -->
-      <hr />
-      <!-- Optional horizontal line for visual separation -->
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="width: 100%"
+            [disabled]="registerForm.invalid"
+            (click)="onRegister()"
+          >
+            Register
+          </button>
+        </form>
+        <!-- Additional Login Options -->
+        <hr />
+        <!-- Optional horizontal line for visual separation -->
 
-      <div class="text-center">
-        Already a member? <a routerLink="/login"> Login</a>
+        <div class="text-center">
+          Already a member? <a routerLink="/login"> Login</a>
+        </div>
       </div>
     </div>
   </div>
