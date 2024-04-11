@@ -3,7 +3,9 @@
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
         <div class="section-heading text-center">
-          <h2>Choose <em>Program</em></h2>
+          <h2>
+            CHOOSE <em><strong style="color: orangered">𝗣𝗥𝗢𝗚𝗥𝗔𝗠</strong></em>
+          </h2>
           <img src="assets/images/line-dec.png" alt="" />
 
           <p>
@@ -59,9 +61,9 @@
               <div class="right-content">
                 <h4>New Gym Training</h4>
                 <p>
-                  Experience the pinnacle of fitness with AdvancedNew Gym
-                  Training: Elevate your workout routine and achieve peak
-                  performance with cutting-edge equipment and expert guidance.
+                  Experience the pinnacle of fitness that elevate your workout
+                  routine and achieve peak performance with cutting-edge
+                  equipment .
                 </p>
                 <a href="#" class="text-button">Discover More</a>
               </div>
@@ -110,8 +112,7 @@
               <div class="right-content">
                 <h4>Advanced Muscle Course</h4>
                 <p>
-                  Take your strength to new heights with our advanced muscle
-                  course. Elevate your training regimen with expert guidance and
+                  Elevate your training regimen with expert guidance and
                   specialized workouts tailored to sculpt and define your
                   muscles like never before.
                 </p>
@@ -157,10 +158,8 @@
               <div class="right-content">
                 <h4>Body Building Course</h4>
                 <p>
-                  Unlock your ultimate physique with our Advanced New Body
-                  Building Course. Elevate your strength, sculpt your muscles,
-                  and achieve peak performance with expert guidance and
-                  cutting-edge techniques.
+                  Elevate your strength, sculpt your muscles, and achieve peak
+                  performance with expert guidance and cutting-edge techniques.
                 </p>
                 <a href="#" class="text-button">Discover More</a>
               </div>
@@ -183,7 +182,10 @@
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
         <div class="cta-content">
-          <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
+          <h2>
+            𝗗𝗢𝗡’𝗧<em style="color: orangered"> 𝗧𝗛𝗜𝗡𝗞</em>, 𝗕𝗘𝗚𝗜𝗡
+            <em style="color: orangered">𝗧𝗢𝗗𝗔𝗬</em>!
+          </h2>
           <p>
             Discover the new way to fitness success! With our innovative gym
             programs, achieving your health goals has never been easier. Join us
@@ -191,11 +193,18 @@
             lifestyle. Your fitness journey starts here!
           </p>
           <div class="main-button scroll-to-section red-button">
-            <a routerLink="/classes">Become a member</a>
+            <button
+              class="btn btn-primary"
+              style="background-color: orangered; border: none"
+              (click)="navigateToRegister()"
+            >
+              Become a member
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <app-classes></app-classes>

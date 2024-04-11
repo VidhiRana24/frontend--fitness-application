@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+  background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
 }
 
 /* Style for caption */
@@ -39,11 +39,14 @@
   margin-top: 30px;
 }
 
-.main-button a {
-  color: #fff;
-}
-
 /* Style for main button on hover */
 .main-button a:hover {
   color: #fff;
+}
+
+.main-button[_ngcontent-ng-c853443787][_ngcontent-ng-c853443787]
+  a[_ngcontent-ng-c853443787][_ngcontent-ng-c853443787] {
+  color: #fff;
+  border: none;
+  background-color: orangered;
 }

@@ -89,4 +89,34 @@ user agent stylesheet section {
 [_ngcontent-ng-c1443117620]::before {
   box-sizing: border-box;
   padding: 1px;
+  text-decoration: none;
+}
+.card {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+img,
+svg {
+  vertical-align: middle;
+  padding: 7px;
+  color: oranged;
+}
+.card.shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+}
+.sameline {
+  display: flex;
+  text-decoration: none;
+}
+*[_ngcontent-ng-c3998319072],
+[_ngcontent-ng-c3998319072]::after,
+[_ngcontent-ng-c3998319072]::before {
+  /* box-sizing: border-box; */
+  text-decoration: none;
+  padding: 4px;
+}
+
+.btn btn-primary {
+  background-color: orangered;
 }

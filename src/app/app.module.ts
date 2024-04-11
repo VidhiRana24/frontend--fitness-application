@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorComponent } from './shared/error/error.component';
+
 @NgModule({
   declarations: [
     AppComponent,

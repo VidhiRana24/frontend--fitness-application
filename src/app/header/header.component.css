@@ -60,3 +60,6 @@ button:not(:disabled) {
 .collapse navbar-collapse {
   margin-right: 40px;
 }
+.nav-item .nav-link.active {
+  color: orangered !important;
+}

@@ -3,12 +3,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { passwordMatchValidator } from '../../shared/error/password-match.directive';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { ErrorComponent } from '../../shared/error/error.component';
 @Component({
   selector: 'app-reg',
   templateUrl: './reg.component.html',
   styleUrl: './reg.component.css',
 })
 export class RegComponent implements OnInit {
+  [x: string]: any;
   showOverlay: boolean = true;
   usernamePattern = '/^[A-Za-Z]+(?: [a-zA-Z]+)*$/';
   registerForm!: FormGroup;

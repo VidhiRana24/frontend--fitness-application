@@ -6,7 +6,7 @@
 .schedule-table th,
 .schedule-table td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 20px;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -20,6 +20,9 @@
 .day-links {
   display: flex;
   gap: 20px; /* Adjust the spacing between links */
+  color: orangered;
+  margin-left: 210px;
+  padding: 10px;
 }
 
 .day-links span {

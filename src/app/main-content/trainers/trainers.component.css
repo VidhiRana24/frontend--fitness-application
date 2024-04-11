@@ -9,3 +9,7 @@ p {
   margin-bottom: 1rem;
   padding: 20px;
 }
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+}

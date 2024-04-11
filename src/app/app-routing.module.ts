@@ -7,7 +7,6 @@ import { ScheduleComponent } from './main-content/schedule/schedule.component';
 import { ContactComponent } from './main-content/contact/contact.component';
 import { TrainersComponent } from './main-content/trainers/trainers.component';
 import { LoginComponent } from './components/login/login.component';
-// import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
 import { RegComponent } from './components/reg/reg.component';
