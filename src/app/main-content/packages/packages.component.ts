@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class PackagesComponent {
   constructor(private router: Router) {}
-  navigateToRegister() {
-    this.router.navigate(['/register']);
+  navigateToWorkoutPlan() {
+    this.router.navigate(['/workoutplan']);
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -14,10 +14,19 @@ export class AuthService {
     alert('User Register Successfully');
     return this.http.post<any>(`${this.baseUrl}/user/create`, userDetails);
   }
+
   loginUser(userDetails: any): Observable<any> {
-    alert('User Loged In Successfully');
-    return this.http.post<any>(`${this.baseUrl}/user/login`, userDetails);
+    return this.http.post<any>(`${this.baseUrl}/user/login`, userDetails).pipe(
+      tap((response: { token: string }) => {
+        if (response && response.token) {
+          console.log('Token:', response.token);
+          // You can also store the token in local storage for later use
+          localStorage.setItem('token', response.token);
+        }
+      })
+    );
   }
+
   isLoggedIn(): boolean {
     // Implement your logic to check if the user is logged in
     // For example, you might check if there is a token in local storage

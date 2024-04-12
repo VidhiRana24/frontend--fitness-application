@@ -17,4 +17,9 @@ export class AppComponent {
   isRegisterPage() {
     return this.router.url.includes('/register');
   }
+
+  isWorkoutPlan(): boolean {
+    // Logic to determine if the current route is the workout plan page
+    return this.router.url === '/workoutplan';
+  }
 }

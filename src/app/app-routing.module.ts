@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
 import { RegComponent } from './components/reg/reg.component';
+import { WorkoutPlanComponent } from './main-content/workout-plan/workout-plan.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'schedule', component: ScheduleComponent },
   { path: 'trainer', component: TrainersComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'workoutplan', component: WorkoutPlanComponent },
   {
     path: '',
     redirectTo: 'home',

@@ -5,6 +5,9 @@ import { TrainersComponent } from './trainers/trainers.component';
 import { ContactComponent } from './contact/contact.component';
 import { ClassesComponent } from './classes/classes.component';
 import { PackagesComponent } from './packages/packages.component';
+import { WorkoutPlanComponent } from './workout-plan/workout-plan.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,14 +16,16 @@ import { PackagesComponent } from './packages/packages.component';
     ContactComponent,
     ClassesComponent,
     PackagesComponent,
+    WorkoutPlanComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
     ScheduleComponent,
     TrainersComponent,
     ContactComponent,
     ClassesComponent,
     PackagesComponent,
+    WorkoutPlanComponent,
   ],
 })
 export class MainContentModule {}
