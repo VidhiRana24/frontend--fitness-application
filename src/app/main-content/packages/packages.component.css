@@ -104,3 +104,38 @@ h2 {
   font-size: calc(1.325rem + 0.9vw);
   padding: 30px;
 }
+
+a {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+  padding: 30px;
+}
+.image-hover {
+  transition: transform 0.3s ease;
+
+  border-radius: 20px 10px;
+}
+
+.image-hover:hover {
+  transform: scale(1.1); /* Increase the scale for the hover effect */
+}

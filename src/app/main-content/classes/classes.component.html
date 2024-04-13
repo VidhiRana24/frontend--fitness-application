@@ -1,4 +1,84 @@
 <!-- ***** Our Classes Start ***** -->
+<!-- app.component.html -->
+
+<header class="header-area header-sticky">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <!-- Logo -->
+      <img src="assets/images/tabs-first-icon.png" alt="" />
+      <a class="navbar-brand" routerLink="/"
+        >FITFUSION<em><strong style="color: orangered"> HUB</strong></em></a
+      >
+
+      <!-- Navbar Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- Nav Links -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about" routerLinkActive="active"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/classes" routerLinkActive="active"
+              >Classes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/schedule" routerLinkActive="active"
+              >Schedules</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/trainer" routerLinkActive="active"
+              >Trainers</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/gallery" routerLinkActive="active"
+              >Profile</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active"
+              >Contact</a
+            >
+          </li>
+          <!-- Sign Up Button -->
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/login"
+              style="color: white; background-color: orangered"
+              >Sign Out</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- This is where the content of your different components will be loaded dynamically -->
+
 <div class="container">
   <section class="section" id="our-classes">
     <div class="container">
@@ -92,7 +172,9 @@
                     now!
                   </p>
                   <div class="main-button">
-                    <a href="#" class="btn btn-primary">View Schedule</a>
+                    <a routerLink="/classes-details" class="btn btn-primary"
+                      >View Schedule</a
+                    >
                   </div>
                 </div>
               </div>
@@ -111,7 +193,9 @@
                     classes now!
                   </p>
                   <div class="main-button">
-                    <a href="#" class="btn btn-primary">View Schedule</a>
+                    <a routerLink="/classes-details" class="btn btn-primary"
+                      >View Schedule</a
+                    >
                   </div>
                 </div>
               </div>
@@ -130,7 +214,9 @@
                     fitness journey!
                   </p>
                   <div class="main-button">
-                    <a href="#" class="btn btn-primary">View Schedule</a>
+                    <a routerLink="/classes-details" class="btn btn-primary"
+                      >View Schedule</a
+                    >
                   </div>
                 </div>
               </div>
@@ -149,7 +235,9 @@
                     Zumba classes!
                   </p>
                   <div class="main-button">
-                    <a href="#" class="btn btn-primary">View Schedule</a>
+                    <a routerLink="/classes-details" class="btn btn-primary"
+                      >View Schedule</a
+                    >
                   </div>
                 </div>
               </div>
@@ -160,6 +248,7 @@
     </div>
   </section>
 </div>
-<section>
-  <app-schedule></app-schedule>
-</section>
+
+<app-schedule></app-schedule>
+
+<router-outlet></router-outlet>

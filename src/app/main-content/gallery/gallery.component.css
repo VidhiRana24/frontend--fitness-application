@@ -1,0 +1,45 @@
+/* gallery.component.css */
+
+/* Styles for the container holding the buttons */
+.container {
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+
+/* Styles for the buttons */
+.btn {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+/* Styles for the gallery section */
+.gallery {
+  margin-top: 20px; /* Add margin at the top for spacing */
+}
+
+/* Styles for gallery items */
+.gallery-item {
+  margin-bottom: 20px; /* Add margin at the bottom for spacing between items */
+}
+
+/* Styles for images inside gallery items */
+.gallery-item img {
+  width: 100%; /* Make images fill their parent container */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+/* Styles for videos inside gallery items */
+.gallery-item iframe {
+  width: 100%; /* Make videos fill their parent container */
+  border: none; /* Remove default iframe border */
+}
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+  align-items: center;
+}

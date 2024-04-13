@@ -9,6 +9,7 @@ import { BannerComponent } from './banner/banner.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { MainContentModule } from './main-content/main-content.module';
+import { RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegComponent } from './components/reg/reg.component';
 import { HomeComponent } from './components/home/home.component';
@@ -32,6 +33,7 @@ import { ErrorComponent } from './shared/error/error.component';
   providers: [AuthService],
   bootstrap: [AppComponent],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

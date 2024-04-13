@@ -1,0 +1,93 @@
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>GET FIT WITH FUN – JOIN OUR ZUMBA FITNESS PARTY AT WAVES GYM!</h2>
+      <img src="assets/images/line-dec.png" alt="Line Decoration" />
+    </div>
+    <div class="section-description">
+      <p>
+        Experience a blast of energy and joy with each dance move in our dynamic
+        Zumba classes. Our workout is more than just exercise; it’s a
+        celebration with pulsating beats and vibrant dance styles, including
+        Salsa, Merengue, Tango, Hip-Hop, and Bollywood. Unleash your potential
+        and dance away the calories.
+      </p>
+    </div>
+    <div class="benefits">
+      <h3>Top Benefits of Our Zumba Classes:</h3>
+      <ul class="benefits-list">
+        <li>Maximum Calorie Burning</li>
+        <li>Comprehensive Body Toning</li>
+        <li>Enhanced Coordination</li>
+        <li>Boosted Endurance & Posture</li>
+        <li>Stress Relief & Mental Clarity</li>
+        <li>Elevated Mood & Positivity</li>
+      </ul>
+    </div>
+    <div class="why-choose">
+      <h3>Why Choose Waves Gym for Zumba?</h3>
+      <ul class="why-choose-list">
+        <li>Certified, Passionate Instructors</li>
+        <li>Welcoming Classes for All Levels</li>
+        <li>State-of-the-Art Dance Studio</li>
+        <li>Zumba Fitness</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary" (click)="joinZumba()">Join Zumba</button>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-8 offset-md-2">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            *ngFor="let image of images; let i = index"
+            [class.active]="i === 0"
+            data-target="#carouselExampleIndicators"
+            [attr.data-slide-to]="i"
+          ></li>
+        </ol>
+        <div class="carousel-inner">
+          <div
+            *ngFor="let image of images; let i = index"
+            class="carousel-item"
+            [class.active]="i === 0"
+          >
+            <img
+              class="d-block w-100"
+              src="assets/images/{{ image }}"
+              alt="Slide {{ i + 1 }}"
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

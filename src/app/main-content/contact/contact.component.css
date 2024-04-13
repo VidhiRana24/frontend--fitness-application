@@ -62,3 +62,10 @@ button:not(:disabled) {
   background-color: orangered;
   border: none;
 }
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 5px;
+}

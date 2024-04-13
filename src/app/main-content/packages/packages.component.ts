@@ -10,4 +10,29 @@ export class PackagesComponent {
   navigateToWorkoutPlan() {
     this.router.navigate(['/workoutplan']);
   }
+
+  navigateToDetailPage() {
+    this.router.navigate(['/detailpage']);
+  }
 }
+document.addEventListener('DOMContentLoaded', function (event: Event): void {
+  var contentItems = document.querySelectorAll('.content');
+  var descriptionItems = document.querySelectorAll('.description');
+
+  function checkScroll(): void {
+    contentItems.forEach(function (content, index) {
+      var contentPosition = content.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight / 1.3; // Adjust the value to trigger the animation earlier or later
+
+      if (contentPosition < windowHeight) {
+        content.classList.add('animated', 'slideInLeft');
+        setTimeout(function () {
+          descriptionItems[index].classList.add('animated', 'slideInRight');
+        }, 300); // Delay the description animation for a smoother effect
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  window.addEventListener('resize', checkScroll);
+});

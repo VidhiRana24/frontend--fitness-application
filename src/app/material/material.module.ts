@@ -10,9 +10,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ErrorComponent } from '../shared/error/error.component';
+
 @NgModule({
-  declarations: [ErrorComponent],
+  declarations: [],
   imports: [CommonModule],
   exports: [
     MatButtonModule,

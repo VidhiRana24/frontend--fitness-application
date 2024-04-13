@@ -12,6 +12,10 @@ import { NoPageFoundComponent } from './components/no-page-found/no-page-found.c
 import { RegComponent } from './components/reg/reg.component';
 import { WorkoutPlanComponent } from './main-content/workout-plan/workout-plan.component';
 
+import { GalleryComponent } from './main-content/gallery/gallery.component';
+import { ClassesDetailsComponent } from './main-content/classes-details/classes-details.component';
+import { MainContentRoutingModule } from './main-content/main-content-routing.module';
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegComponent },
@@ -22,6 +26,8 @@ const routes: Routes = [
   { path: 'trainer', component: TrainersComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'workoutplan', component: WorkoutPlanComponent },
+  { path: 'classes-details', component: ClassesDetailsComponent },
+  { path: 'gallery', component: GalleryComponent },
   {
     path: '',
     redirectTo: 'home',
@@ -34,7 +40,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    MainContentRoutingModule, // Import MainContentRoutingModule here
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

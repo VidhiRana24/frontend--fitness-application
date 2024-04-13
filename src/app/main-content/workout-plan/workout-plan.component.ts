@@ -1,6 +1,7 @@
 import { SelectorListContext } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-workout-plan',
@@ -30,6 +31,7 @@ export class WorkoutPlanComponent {
     { value: 7, label: '7' },
     { value: '7+', label: '7+' },
   ];
+  constructor(private router: Router) {}
 
   goals: any[] = [
     {
@@ -154,5 +156,12 @@ export class WorkoutPlanComponent {
     if (this.currentSection > 1) {
       this.currentSection--;
     }
+  }
+
+  onSubmit1() {
+    // Perform form submission logic here
+
+    // Navigate to the next route after form submission
+    this.router.navigate(['/classes']);
   }
 }
