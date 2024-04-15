@@ -36,7 +36,7 @@ export class LoginComponent {
     this.authService.loginUser(userDetails).subscribe(
       () => {
         // Navigate to home page after successful login
-        this.router.navigate(['/classes']);
+        this.router.navigate(['/about']);
       },
       (error) => {
         console.error('Login failed:', error);

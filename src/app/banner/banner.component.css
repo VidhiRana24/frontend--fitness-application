@@ -50,3 +50,42 @@
   border: none;
   background-color: orangered;
 }
+img:hover {
+  transform: scale(1.1); /* Enlarge the image by 10% */
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+}
+
+.main-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.main-button a:hover {
+  background-color: orangered;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  padding: 30px;
+}
+.h3,
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+  padding: 20px;
+}
