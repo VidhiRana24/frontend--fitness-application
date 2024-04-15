@@ -1,25 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import jQuery from 'jquery';
 
 @Component({
   selector: 'app-classes-details',
   templateUrl: './classes-details.component.html',
-  styleUrl: './classes-details.component.css',
+  styleUrls: ['./classes-details.component.css'],
 })
-export class ClassesDetailsComponent {
+export class ClassesDetailsComponent implements OnInit {
   joinZumba(): void {
-    // Add your logic here for what happens when the user joins the Zumba class
     console.log('User joined Zumba class!');
-    // You can navigate to another route, show a modal, or perform any other action
+    // Add your logic here for what happens when the user joins the Zumba class
   }
 
-  images = [
-    'cardio.jpg',
-    'cardio.jpg',
-    'cardio.jpg',
-    'cardio.jpg',
-    'cardio.jpg',
-    'cardio.jpg',
-    'cardio.jpg',
-    'cardio.jpg',
-  ];
+  images = ['cardio.jpg', 'cardio.jpg', 'cardio.jpg'];
+  ngOnInit(): void {
+    // Initialize the carousel
+    (<any>jQuery)('#carouselExampleSlidesOnly').carousel();
+  }
 }

@@ -16,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorComponent } from './shared/error/error.component';
+import { UsersDashboardComponent } from './users-dashboard/users-dashboard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ErrorComponent } from './shared/error/error.component';
     HomeComponent,
     NoPageFoundComponent,
     ErrorComponent,
+    UsersDashboardComponent,
+    UserProfileComponent,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

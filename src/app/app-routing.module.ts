@@ -15,10 +15,14 @@ import { WorkoutPlanComponent } from './main-content/workout-plan/workout-plan.c
 import { GalleryComponent } from './main-content/gallery/gallery.component';
 import { ClassesDetailsComponent } from './main-content/classes-details/classes-details.component';
 import { MainContentRoutingModule } from './main-content/main-content-routing.module';
+import { UsersDashboardComponent } from './users-dashboard/users-dashboard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegComponent },
+  { path: 'dashboard', component: UsersDashboardComponent },
+  { path: 'profile', component: UserProfileComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: PackagesComponent },
   { path: 'classes', component: ClassesComponent },
