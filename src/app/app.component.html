@@ -1,7 +1,5 @@
 <app-header
-  *ngIf="
-    !isLoginPage() && !isRegisterPage() && !isWorkoutPlan() && !isClasses()
-  "
+  *ngIf="!isLoginPage() && !isRegisterPage() && !isWorkoutPlan()"
 ></app-header>
 
 <router-outlet></router-outlet>
