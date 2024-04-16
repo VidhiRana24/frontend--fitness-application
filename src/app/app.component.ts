@@ -22,8 +22,4 @@ export class AppComponent {
     // Logic to determine if the current route is the workout plan page
     return this.router.url === '/workoutplan';
   }
-  isClasses(): boolean {
-    // Logic to determine if the current route is the workout plan page
-    return this.router.url === '/classes';
-  }
 }

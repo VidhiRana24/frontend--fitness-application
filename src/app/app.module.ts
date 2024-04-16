@@ -19,7 +19,7 @@ import { ErrorComponent } from './shared/error/error.component';
 import { UsersDashboardComponent } from './users-dashboard/users-dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,9 +46,6 @@ import { AgmCoreModule } from '@agm/core';
     MainContentModule,
     HttpClientModule,
     GoogleMapsModule,
-    AgmCoreModule.forRoot({
-      apiKey: '',
-    }),
   ],
 })
 export class AppModule {}
