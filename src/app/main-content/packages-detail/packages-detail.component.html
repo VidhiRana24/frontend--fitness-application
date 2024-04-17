@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Purchase Packages</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let package of packages">
+      <div class="card">
+        <img class="card-img-top" [src]="package.image" alt="Package Image" />
+        <div class="card-body">
+          <h5 class="card-title">{{ package.name }}</h5>
+          <p class="card-text">Price: {{ package.price }}</p>
+          <p class="card-text">{{ package.description }}</p>
+          <!-- Added description here -->
+          <ng-container *ngIf="package.special; else normalButton">
+            <button (click)="selectPackage(package)" class="btn btn-danger">
+              Special Select
+            </button>
+          </ng-container>
+          <ng-template #normalButton>
+            <button (click)="selectPackage(package)" class="btn btn-primary">
+              Purchase Now!!
+            </button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

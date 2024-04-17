@@ -22,4 +22,9 @@ export class AppComponent {
     // Logic to determine if the current route is the workout plan page
     return this.router.url === '/workoutplan';
   }
+
+  isProfile(): boolean {
+    // Logic to determine if the current route is the workout plan page
+    return this.router.url === '/profile';
+  }
 }

@@ -4,5 +4,7 @@
 
 <router-outlet></router-outlet>
 <app-footer
-  *ngIf="!isLoginPage() && !isRegisterPage() && !isWorkoutPlan()"
+  *ngIf="
+    !isLoginPage() && !isRegisterPage() && !isWorkoutPlan() && !isProfile()
+  "
 ></app-footer>

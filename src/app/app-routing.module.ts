@@ -17,6 +17,8 @@ import { ClassesDetailsComponent } from './main-content/classes-details/classes-
 import { MainContentRoutingModule } from './main-content/main-content-routing.module';
 import { UsersDashboardComponent } from './users-dashboard/users-dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PackagesDetailComponent } from './main-content/packages-detail/packages-detail.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -32,6 +34,9 @@ const routes: Routes = [
   { path: 'workoutplan', component: WorkoutPlanComponent },
   { path: 'classes-details', component: ClassesDetailsComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'payment', component: PaymentComponent },
+  { path: 'packagesDetail', component: PackagesDetailComponent },
+
   {
     path: '',
     redirectTo: 'home',

@@ -12,6 +12,7 @@ import { WorkoutPlanComponent } from './workout-plan/workout-plan.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ClassesDetailsComponent } from './classes-details/classes-details.component';
 import { FormsModule } from '@angular/forms';
+import { PackagesDetailComponent } from './packages-detail/packages-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     PackagesComponent,
     GalleryComponent,
     ClassesDetailsComponent,
+    PackagesDetailComponent,
   ],
   imports: [
     CommonModule,

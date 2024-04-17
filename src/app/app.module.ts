@@ -19,6 +19,7 @@ import { ErrorComponent } from './shared/error/error.component';
 import { UsersDashboardComponent } from './users-dashboard/users-dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     ErrorComponent,
     UsersDashboardComponent,
     UserProfileComponent,
+    PaymentComponent,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
