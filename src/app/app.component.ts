@@ -27,4 +27,7 @@ export class AppComponent {
     // Logic to determine if the current route is the workout plan page
     return this.router.url === '/profile';
   }
+  isPayment(): boolean {
+    return this.router.url === '/payment';
+  }
 }

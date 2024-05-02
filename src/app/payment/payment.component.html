@@ -1,123 +1,173 @@
-<h2>Payment</h2>
-
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form action="/action_page.php">
+<div class="container" *ngIf="!showPaymentSuccessMessage">
+  <h2>Payment</h2>
+  <form
+    [formGroup]="paymentForm"
+    (ngSubmit)="processPayment()"
+    class="payment-form"
+  >
+    <div class="row">
+      <div class="col-6">
+        <h3>Billing Address</h3>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            formControlName="fullName"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            formControlName="address"
+            class="form-control"
+            required
+          />
+        </div>
         <div class="row">
-          <div class="col-50">
-            <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="Enter First Name"
-            />
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Enter your Email Address"
-            />
-            <label for="adr"
-              ><i class="fa fa-address-card-o"></i> Address</label
-            >
-            <input
-              type="text"
-              id="adr"
-              name="address"
-              placeholder="Enter your Address"
-            />
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="New York" />
-
-            <div class="row">
-              <div class="col-50">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY" />
-              </div>
-              <div class="col-50">
-                <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="10001" />
-              </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                id="city"
+                formControlName="city"
+                class="form-control"
+                required
+              />
             </div>
           </div>
-
-          <div class="col-50">
-            <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style="color: navy"></i>
-              <i class="fa fa-cc-amex" style="color: blue"></i>
-              <i class="fa fa-cc-mastercard" style="color: red"></i>
-              <i class="fa fa-cc-discover" style="color: orange"></i>
-            </div>
-            <label for="cname">Name on Card</label>
-            <input
-              type="text"
-              id="cname"
-              name="cardname"
-              placeholder="Enter your card name"
-            />
-            <label for="ccnum">Credit card number</label>
-            <input
-              type="text"
-              id="ccnum"
-              name="cardnumber"
-              placeholder="1111-2222-3333-4444"
-            />
-            <label for="expmonth">Exp Month</label>
-            <input
-              type="text"
-              id="expmonth"
-              name="expmonth"
-              placeholder="like: September"
-            />
-            <div class="row">
-              <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input
-                  type="text"
-                  id="expyear"
-                  name="expyear"
-                  placeholder="2018"
-                />
-              </div>
-              <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352" />
-              </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="zip">Zip Code</label>
+              <input
+                type="text"
+                id="zip"
+                formControlName="zip"
+                class="form-control"
+                required
+              />
             </div>
           </div>
         </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr" /> Shipping
-          address same as billing
-        </label>
-        <input type="submit" value="Continue to checkout" class="btn" />
-      </form>
+      </div>
+
+      <div class="col-6">
+        <h3>Payment</h3>
+        <div class="form-group">
+          <label for="cardName">Name on Card</label>
+          <input
+            type="text"
+            id="cardName"
+            formControlName="cardName"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input
+            type="text"
+            id="cardNumber"
+            formControlName="cardNumber"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="expDate">Expiration Date</label>
+              <input
+                type="text"
+                id="expDate"
+                formControlName="expDate"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input
+                type="text"
+                id="cvv"
+                formControlName="cvv"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="col-25">
-    <!-- <div class="container">
-      <h4>
-        Cart
-        <span class="price" style="color: black"
-          ><i class="fa fa-shopping-cart"></i> <b>4</b></span
-        >
-      </h4>
-      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-      <hr />
-      <p>
-        Total <span class="price" style="color: black"><b>$30</b></span>
-      </p>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" formControlName="sameAddress" /> Shipping address
+        same as billing
+      </label>
     </div>
+    <button type="submit" class="btn btn-primary">Continue to checkout</button>
+  </form>
+</div>
+
+<div
+  class="container"
+  *ngIf="showPaymentSuccessMessage"
+  style="
+    margin: auto; /* Center horizontally */
+    margin-top: 10vh; /* Adjust top margin for vertical centering */
+    background-color: #c5c6c7;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Londrina Solid', cursive;
+    max-height: 200vh;
+    padding-bottom: 20vh;
+  "
+>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+    <button
+      class="btn btn-info me-md-2"
+      type="button"
+      routerLink="/profile"
+      style="border: solid #1f2833; margin: 1vw"
+    >
+      Profile
+    </button>
+    <button
+      class="btn btn-info me-md-2"
+      type="button"
+      routerLink="/packages"
+      style="border: solid #1f2833; margin: 1vw"
+    >
+      Packages
+    </button>
   </div>
-</div> -->
+  <hr style="height: 2px; margin: 1%; padding: 0" />
+  <div
+    class="card text-center shadow-lg"
+    style="margin: 4vw; background-color: #c5c6c7"
+  >
+    <div class="card-header">has been purchased</div>
+    <div class="card-body" style="background-color: whitesmoke">
+      <h2 class="card-title text-success">Payment Successfull</h2>
+      <p class="card-text">Thanks for choosing Hustle Fitness</p>
+      <a routerLink="/profile" class="btn btn-info">Lets Go &raquo;</a>
+    </div>
+    <div class="card-footer text-muted">Hustle Fitness</div>
   </div>
 </div>

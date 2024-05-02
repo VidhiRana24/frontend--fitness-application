@@ -2,6 +2,7 @@ import { SelectorListContext } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { WorkoutService } from '../../services/workout-service.service';
 
 @Component({
   selector: 'app-workout-plan',
@@ -31,7 +32,7 @@ export class WorkoutPlanComponent {
     { value: 7, label: '7' },
     { value: '7+', label: '7+' },
   ];
-  constructor(private router: Router) {}
+  constructor(private router: Router, private workoutService: WorkoutService) {}
 
   goals: any[] = [
     {

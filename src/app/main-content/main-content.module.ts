@@ -10,8 +10,7 @@ import { ClassesComponent } from './classes/classes.component';
 import { PackagesComponent } from './packages/packages.component';
 import { WorkoutPlanComponent } from './workout-plan/workout-plan.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { ClassesDetailsComponent } from './classes-details/classes-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PackagesDetailComponent } from './packages-detail/packages-detail.component';
 
 @NgModule({
@@ -23,12 +22,13 @@ import { PackagesDetailComponent } from './packages-detail/packages-detail.compo
     ContactComponent,
     PackagesComponent,
     GalleryComponent,
-    ClassesDetailsComponent,
+
     PackagesDetailComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule, // Import RouterModule here
   ],
   exports: [

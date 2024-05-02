@@ -7,19 +7,6 @@
         >FITFUSION<em><strong style="color: orangered"> HUB</strong></em></a
       >
 
-      <!-- Navbar Toggler -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
       <!-- Navbar Content -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
@@ -29,6 +16,7 @@
               class="nav-link active"
               routerLink="/home"
               routerLinkActive="active"
+              id="homeLink"
               >Home</a
             >
           </li>
@@ -37,7 +25,6 @@
               >About</a
             >
           </li>
-
           <li class="nav-item">
             <a class="nav-link" routerLink="/trainer" routerLinkActive="active"
               >Trainers</a
@@ -53,21 +40,16 @@
               >Profile</a
             >
           </li>
-
           <li class="nav-item">
             <a class="nav-link" routerLink="/contact" routerLinkActive="active"
               >Contact</a
             >
           </li>
-          <!-- Sign Up Button -->
-          <li class="nav-item">
-            <button
-              class="btn btn-danger ml-2"
-              style="background-color: orangered"
-              routerLink="login"
-            >
-              Sign In
-            </button>
+          <li class="nav-item mr-2">
+            <a class="nav-link" routerLink="/settings">
+              <i class="fa-solid fa-gear"></i>
+              <!-- Setting icon -->
+            </a>
           </li>
         </ul>
       </div>

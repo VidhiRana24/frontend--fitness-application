@@ -58,15 +58,14 @@ export class RegComponent implements OnInit {
     const userDetails = this.registerForm.value;
     this.authService.registerUser(userDetails).subscribe(
       () => {
-        // Navigate to home page after successful login
+        // Navigate to home page after successful registration
         this.router.navigate(['/login']);
       },
       (error) => {
-        console.error('Login failed:', error);
+        console.error('Registration failed:', error);
       }
     );
-    // Assuming login logic is implemented here
-    // Once login is successful, hide the overlay
+
     this.showOverlay = false;
   }
 }

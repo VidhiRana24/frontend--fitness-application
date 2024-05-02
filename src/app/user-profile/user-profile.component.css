@@ -92,3 +92,39 @@
   padding: 10px 20px;
   cursor: pointer;
 }
+/* Profile Image */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* Profile Settings */
+.profile-settings {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-settings h4 {
+  text-align: right;
+}
+
+.labels {
+  font-weight: bold;
+}
+
+.profile-button {
+  margin-top: 20px;
+}
+.profile-image-wrapper {
+  background-color: #000;
+}
+
+.profile-image {
+  border: 4px solid #fff; /* White border around the image */
+}
+
+.profile-image-wrapper span {
+  display: block;
+}

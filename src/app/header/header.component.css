@@ -20,7 +20,7 @@
   position: relative;
   margin: 20px;
   min-width: 992px;
-  left: 70cap;
+  margin-left: 20cap;
 }
 .main-nav .navbar-nav .btn {
   margin-left: 15px; /* Adjust spacing between links and button */
@@ -58,8 +58,20 @@ button:not(:disabled) {
   margin-left: 50%;
 }
 .collapse navbar-collapse {
-  margin-right: 40px;
+  margin-right: 0px;
 }
 .nav-item .nav-link.active {
   color: orangered !important;
+}
+
+.navbar-nav[_ngcontent-ng-c142644284] .nav-link[_ngcontent-ng-c142644284] {
+  line-height: 40px;
+  padding: 20px;
+}
+
+.navbar-toggler:hover {
+  transform: translateY(-5px);
+}
+.nav-link:hover {
+  transform: translateY(-5px); /* Adjust the value as needed */
 }

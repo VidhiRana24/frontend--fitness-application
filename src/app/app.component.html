@@ -1,10 +1,16 @@
 <app-header
-  *ngIf="!isLoginPage() && !isRegisterPage() && !isWorkoutPlan()"
+  *ngIf="
+    !isLoginPage() && !isRegisterPage() && !isWorkoutPlan() && !isPayment()
+  "
 ></app-header>
 
 <router-outlet></router-outlet>
 <app-footer
   *ngIf="
-    !isLoginPage() && !isRegisterPage() && !isWorkoutPlan() && !isProfile()
+    !isLoginPage() &&
+    !isRegisterPage() &&
+    !isWorkoutPlan() &&
+    !isProfile() &&
+    !isPayment()
   "
 ></app-footer>

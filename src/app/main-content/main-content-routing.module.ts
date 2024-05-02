@@ -9,7 +9,7 @@ import { ClassesComponent } from './classes/classes.component';
 import { PackagesComponent } from './packages/packages.component';
 
 import { GalleryComponent } from './gallery/gallery.component';
-import { ClassesDetailsComponent } from './classes-details/classes-details.component';
+
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'classes', component: ClassesComponent },
   { path: 'packages', component: PackagesComponent },
-  { path: 'classes-details', component: ClassesDetailsComponent },
+
   { path: 'gallery', component: GalleryComponent },
   {
     path: 'main-content',

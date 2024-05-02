@@ -10,4 +10,17 @@ export class HeaderComponent {
   toggleNavbar: any;
 
   toggle() {}
+  isLoggedIn: boolean = false;
+
+  // Method to handle user login
+  loginUser() {
+    // Perform login logic, such as setting isLoggedIn to true
+    this.isLoggedIn = true;
+  }
+
+  // Method to handle user logout
+  logoutUser() {
+    // Perform logout logic, such as setting isLoggedIn to false
+    this.isLoggedIn = false;
+  }
 }

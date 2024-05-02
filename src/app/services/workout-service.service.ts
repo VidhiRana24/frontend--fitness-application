@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { WorkoutInformation } from '../interfaces/WorkoutInformation';
 
@@ -8,9 +9,9 @@ import { WorkoutInformation } from '../interfaces/WorkoutInformation';
 export class WorkoutService {
   private userWorkoutInfoSubject: BehaviorSubject<WorkoutInformation>;
   public userWorkoutInfo$: Observable<WorkoutInformation>;
+  private apiUrl = '/api/workout'; // Replace this with your backend API URL
 
-  constructor() {
-    // Initialize the BehaviorSubject with some default or initial value
+  constructor(private http: HttpClient) {
     this.userWorkoutInfoSubject = new BehaviorSubject<WorkoutInformation>({
       goal: '',
       fitnessLevel: '',
@@ -31,5 +32,12 @@ export class WorkoutService {
   // Method to get the user's workout information
   getUserWorkoutInformation(): WorkoutInformation {
     return this.userWorkoutInfoSubject.value;
+  }
+
+  // Method to send workout information to the backend
+  sendWorkoutInformation(workoutInfo: WorkoutInformation): Observable<any> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.post(this.apiUrl, workoutInfo, { headers });
   }
 }

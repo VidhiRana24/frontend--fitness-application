@@ -20,6 +20,10 @@ import { UsersDashboardComponent } from './users-dashboard/users-dashboard.compo
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PaymentComponent } from './payment/payment.component';
+import { ZumbaComponent } from './zumba/zumba.component';
+import { MuscleBuildingComponent } from './muscle-building/muscle-building.component';
+import { YogaComponent } from './yoga/yoga.component';
+import { CardioComponent } from './cardio/cardio.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,10 @@ import { PaymentComponent } from './payment/payment.component';
     UsersDashboardComponent,
     UserProfileComponent,
     PaymentComponent,
+    ZumbaComponent,
+    MuscleBuildingComponent,
+    YogaComponent,
+    CardioComponent,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

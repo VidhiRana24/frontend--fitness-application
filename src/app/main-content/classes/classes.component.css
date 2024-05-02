@@ -116,3 +116,8 @@ svg {
   text-decoration: none;
   padding: 4px;
 }
+.card-title {
+  margin-bottom: var(--bs-card-title-spacer-y);
+  color: var(--bs-card-title-color);
+  cursor: pointer;
+}
