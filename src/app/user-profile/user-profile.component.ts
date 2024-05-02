@@ -28,20 +28,19 @@ export class UserProfileComponent implements OnInit {
 
   @ViewChild('fileInput')
   el!: ElementRef;
-  imageUrl: any =
-    'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+  imageUrl: string | null = null;
   editFile: boolean = true;
   removeUpload: boolean = false;
 
-  uploadFile(event: { target: { files: any[] } }) {
+  uploadFile(event: Event) {
     const reader = new FileReader();
-    const file = event.target.files[0];
+    const file = (event.target as HTMLInputElement).files?.[0];
 
     if (file) {
       reader.readAsDataURL(file);
 
       reader.onload = () => {
-        this.imageUrl = reader.result;
+        this.imageUrl = reader.result as string;
         this.registrationForm.patchValue({
           file: reader.result as string,
         });
@@ -54,8 +53,7 @@ export class UserProfileComponent implements OnInit {
   }
 
   removeUploadedFile() {
-    this.imageUrl =
-      'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+    this.imageUrl = null; // Set imageUrl to null to clear the uploaded image
     this.editFile = true;
     this.removeUpload = false;
     this.registrationForm.patchValue({

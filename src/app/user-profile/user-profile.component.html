@@ -1,32 +1,42 @@
-<div class="container-fluid mt-5">
+<div class="container">
   <div class="row">
-    <!-- Sidebar -->
-    <div class="col-md-3">
-      <!-- Sidebar content here -->
-      <div
-        class="d-flex flex-column align-items-center text-center p-3 py-5 bg-dark text-white"
-      >
-        <img
-          class="rounded-circle mt-5"
-          width="150px"
-          src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
-          alt="Profile Image"
-        />
-        <span class="font-weight-bold">Vidhi</span>
-        <span class="text-white-50">vidhi&#64;.com</span>
+    <!-- Image upload section -->
+    <div class="col-md-6 mb-4">
+      <div class="avatar-upload">
+        <!-- Upload image -->
+        <div class="avatar-edit">
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            #fileInput
+            (change)="uploadFile($event)"
+          />
+        </div>
+        <div class="avatar-preview">
+          <!-- Display the uploaded image -->
+          <img
+            id="imagePreview"
+            [src]="imageUrl"
+            *ngIf="imageUrl"
+            alt="Uploaded Image"
+          />
+          <!-- Edit icon -->
+          <div class="avatar-edit-icon" (click)="fileInput.click()">
+            <i class="fas fa-pencil-alt"></i>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- /Sidebar -->
 
-    <!-- Main content -->
+    <!-- User information section -->
     <div class="col-md-6">
-      <!-- Profile Settings -->
-      <div class="rounded bg-white p-3 py-5">
-        <!-- Removed "card" class -->
+      <div class="rounded bg-white">
         <div class="row">
           <div class="col-md-12">
             <h4 class="text-right mb-4">Profile Settings</h4>
           </div>
+          <!-- Input fields for user information -->
           <div class="col-md-6">
             <label class="labels">Name</label>
             <input
@@ -87,20 +97,7 @@
             </button>
           </div>
         </div>
-        <div class="card rounded bg-white mt-5">
-          <div class="card-body">
-            <h4 class="card-title">Daily Workout Status</h4>
-            <!-- Daily workout status content here -->
-          </div>
-        </div>
       </div>
     </div>
-    <!-- /Profile Settings -->
-  </div>
-  <div class="col-md-3">
-    <!-- /Daily Workout Status -->
   </div>
 </div>
-<!-- /Main content -->
-
-<!-- Daily Workout Status -->
