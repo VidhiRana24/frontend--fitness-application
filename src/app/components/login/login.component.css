@@ -30,3 +30,10 @@ button:not(:disabled) {
   background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
   z-index: 9999; /* Ensure it's above other content */
 }
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 0.125rem;
+  display: inline-flex;
+}

@@ -1,0 +1,33 @@
+<!-- trainer-management.component.html -->
+
+<div class="container">
+  <h2>Gym Member Management</h2>
+
+  <!-- Table to display members -->
+  <table class="member-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Package</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of members" (click)="selectMember(member)">
+        <td>{{ member.name }}</td>
+        <td>{{ member.email }}</td>
+        <td>{{ member.packageName }}</td>
+        <td>
+          <button (click)="assignPackage(member)">Assign Package</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Selected member details -->
+  <div *ngIf="selectedMember" class="selected-member">
+    <h3>Selected Member: {{ selectedMember.name }}</h3>
+    <p>Package: {{ selectedMember.packageName }}</p>
+  </div>
+</div>

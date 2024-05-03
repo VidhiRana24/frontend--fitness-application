@@ -23,6 +23,7 @@ import { ZumbaComponent } from './zumba/zumba.component';
 import { MuscleBuildingComponent } from './muscle-building/muscle-building.component';
 import { YogaComponent } from './yoga/yoga.component';
 import { CardioComponent } from './cardio/cardio.component';
+import { TrainerManagementComponent } from './trainer-management/trainer-management.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'muscle-building', component: MuscleBuildingComponent },
   { path: 'yoga', component: YogaComponent },
   { path: 'cardio', component: CardioComponent },
+  { path: 'trainer-manage', component: TrainerManagementComponent },
 
   {
     path: '',

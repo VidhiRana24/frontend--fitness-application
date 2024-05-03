@@ -65,3 +65,21 @@
 .avatar-edit-icon i {
   color: #fff;
 }
+.avatar-preview {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.col-md-6 {
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important; /* Adjust margin bottom for image upload section */
+}

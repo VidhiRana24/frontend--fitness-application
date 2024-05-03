@@ -26,6 +26,27 @@ export class AuthService {
       })
     );
   }
+  registerTrainer(trainerDetails: any): Observable<any> {
+    alert('Trainer Register Successfully');
+    return this.http.post<any>(
+      `${this.baseUrl}/trainer/create`,
+      trainerDetails
+    );
+  }
+
+  loginTrainer(trainerDetails: any): Observable<any> {
+    return this.http
+      .post<any>(`${this.baseUrl}/trainer/login`, trainerDetails)
+      .pipe(
+        tap((response: { token: string }) => {
+          if (response && response.token) {
+            console.log('Trainer Token:', response.token);
+            // You can also store the token in local storage for later use
+            localStorage.setItem('trainerToken', response.token);
+          }
+        })
+      );
+  }
 
   isLoggedIn(): boolean {
     // Implement your logic to check if the user is logged in

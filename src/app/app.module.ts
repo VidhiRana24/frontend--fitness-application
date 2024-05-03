@@ -24,6 +24,7 @@ import { ZumbaComponent } from './zumba/zumba.component';
 import { MuscleBuildingComponent } from './muscle-building/muscle-building.component';
 import { YogaComponent } from './yoga/yoga.component';
 import { CardioComponent } from './cardio/cardio.component';
+import { TrainerManagementComponent } from './trainer-management/trainer-management.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { CardioComponent } from './cardio/cardio.component';
     MuscleBuildingComponent,
     YogaComponent,
     CardioComponent,
+    TrainerManagementComponent,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

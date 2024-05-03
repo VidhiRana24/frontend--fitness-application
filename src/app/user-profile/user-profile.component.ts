@@ -14,6 +14,8 @@ import { FormBuilder } from '@angular/forms';
 })
 export class UserProfileComponent implements OnInit {
   submitted: boolean = false;
+  initialImageUrl: string =
+    'https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-user-2344772021';
 
   constructor(public fb: FormBuilder, private cd: ChangeDetectorRef) {}
 
@@ -49,6 +51,9 @@ export class UserProfileComponent implements OnInit {
       };
 
       this.cd.markForCheck();
+    } else {
+      // Set the image URL to the initial image if no file is uploaded
+      this.imageUrl = this.initialImageUrl;
     }
   }
 
