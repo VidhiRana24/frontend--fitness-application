@@ -1,43 +1,43 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { WorkoutInformation } from '../interfaces/WorkoutInformation';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WorkoutService {
-  private userWorkoutInfoSubject: BehaviorSubject<WorkoutInformation>;
-  public userWorkoutInfo$: Observable<WorkoutInformation>;
-  private apiUrl = '/api/workout'; // Replace this with your backend API URL
+  private baseUrl = 'http://localhost:3001';
 
-  constructor(private http: HttpClient) {
-    this.userWorkoutInfoSubject = new BehaviorSubject<WorkoutInformation>({
-      goal: '',
-      fitnessLevel: '',
-      gender: '',
-      age: 0,
-      height: 0,
-      workoutFrequency: '',
-      workoutLocation: '',
-    });
-    this.userWorkoutInfo$ = this.userWorkoutInfoSubject.asObservable();
+  constructor(private http: HttpClient) {}
+
+  // Method to get all workouts
+  getAllWorkouts(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/workouts`);
   }
 
-  // Method to update the user's workout information
-  updateUserWorkoutInformation(workoutInfo: WorkoutInformation): void {
-    this.userWorkoutInfoSubject.next(workoutInfo);
+  // Method to create a workout plan
+  createWorkoutPlan(workoutData: any): Observable<any> {
+    return this.http.post<any>(
+      `${this.baseUrl}/workoutplan/create`,
+      workoutData
+    );
   }
 
-  // Method to get the user's workout information
-  getUserWorkoutInformation(): WorkoutInformation {
-    return this.userWorkoutInfoSubject.value;
+  // Method to update a workout by its ID
+  updateWorkoutById(workoutId: string, updatedData: any): Observable<any> {
+    return this.http.patch<any>(
+      `${this.baseUrl}/workoutplan/${workoutId}`,
+      updatedData
+    );
   }
 
-  // Method to send workout information to the backend
-  sendWorkoutInformation(workoutInfo: WorkoutInformation): Observable<any> {
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.post(this.apiUrl, workoutInfo, { headers });
+  // Method to delete a workout by its ID
+  deleteWorkoutById(workoutId: string): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}/workoutplan/${workoutId}`);
+  }
+
+  // Method to get a workout by its ID
+  getWorkoutById(workoutId: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/workouts/${workoutId}`);
   }
 }

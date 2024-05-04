@@ -130,7 +130,8 @@ export class WorkoutPlanComponent {
     if (this.selectedAge) progressFactors++;
     if (this.selectedHeightFeet && this.selectedWeight) progressFactors += 2;
     if (this.selectedWorkoutLocation) progressFactors++;
-    this.progressValue = (progressFactors / 8) * 100;
+    if (this.selectedWorkoutFrequency) progressFactors++; // Increment when selectedWorkoutFrequency is set
+    this.progressValue = (progressFactors / 9) * 100; // Update denominator to include the new factor
   }
 
   onSubmit(form: NgForm) {

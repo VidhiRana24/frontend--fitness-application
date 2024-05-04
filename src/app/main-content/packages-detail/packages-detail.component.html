@@ -15,7 +15,12 @@
   <div class="row">
     <div class="col-md-4" *ngFor="let package of packages">
       <div class="card">
-        <img class="card-img-top" [src]="package.image" alt="Package Image" />
+        <img
+          class="card-img-top"
+          [src]="package.image"
+          alt="Package Image"
+          routerLink="/payment"
+        />
         <div class="card-body">
           <h5 class="card-title">{{ package.name }}</h5>
           <p class="card-text">Price: {{ package.price }}</p>
@@ -39,7 +44,12 @@
   <div class="row">
     <div class="col-md-4" *ngFor="let package of packages1">
       <div class="card">
-        <img class="card-img-top" [src]="package.image" alt="Package Image" />
+        <img
+          class="card-img-top"
+          [src]="package.image"
+          alt="Package Image"
+          routerLink="/payment"
+        />
         <div class="card-body">
           <h5 class="card-title">{{ package.name }}</h5>
           <p class="card-text">Price: {{ package.price }}</p>
@@ -63,7 +73,12 @@
   <div class="row">
     <div class="col-md-4" *ngFor="let package of packages2">
       <div class="card">
-        <img class="card-img-top" [src]="package.image" alt="Package Image" />
+        <img
+          class="card-img-top"
+          [src]="package.image"
+          alt="Package Image"
+          routerLink="/payment"
+        />
         <div class="card-body">
           <h5 class="card-title">{{ package.name }}</h5>
           <p class="card-text">Price: {{ package.price }}</p>
@@ -87,7 +102,12 @@
   <div class="row">
     <div class="col-md-4" *ngFor="let package of cardioPackages">
       <div class="card">
-        <img class="card-img-top" [src]="package.image" alt="Package Image" />
+        <img
+          class="card-img-top"
+          [src]="package.image"
+          alt="Package Image"
+          routerLink="/payment"
+        />
         <div class="card-body">
           <h5 class="card-title">{{ package.name }}</h5>
           <p class="card-text">Price: {{ package.price }}</p>

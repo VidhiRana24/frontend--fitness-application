@@ -20,12 +20,12 @@ export class AuthService {
       tap((response: { token: string }) => {
         if (response && response.token) {
           console.log('Token:', response.token);
-          // You can also store the token in local storage for later use
           localStorage.setItem('token', response.token);
         }
       })
     );
   }
+
   registerTrainer(trainerDetails: any): Observable<any> {
     alert('Trainer Register Successfully');
     return this.http.post<any>(
@@ -41,7 +41,6 @@ export class AuthService {
         tap((response: { token: string }) => {
           if (response && response.token) {
             console.log('Trainer Token:', response.token);
-            // You can also store the token in local storage for later use
             localStorage.setItem('trainerToken', response.token);
           }
         })
@@ -49,10 +48,8 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    // Implement your logic to check if the user is logged in
-    // For example, you might check if there is a token in local storage
     const token = localStorage.getItem('token');
-    return !!token; // Return true if token exists, false otherwise
+    console.log('Token:', token);
+    return !!token;
   }
-  // Other methods...
 }

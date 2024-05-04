@@ -162,3 +162,15 @@ h2 {
   height: 100%;
   border-radius: 20px;
 }
+.card {
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.card:hover {
+  transform: scale(1.1); /* Scale the card on hover */
+}
+col-md-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  padding: 70px;
+}
