@@ -25,7 +25,6 @@ import { MuscleBuildingComponent } from './muscle-building/muscle-building.compo
 import { YogaComponent } from './yoga/yoga.component';
 import { CardioComponent } from './cardio/cardio.component';
 import { TrainerManagementComponent } from './trainer-management/trainer-management.component';
-import { UserProfileService } from './services/profile.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +47,7 @@ import { UserProfileService } from './services/profile.service';
     CardioComponent,
     TrainerManagementComponent,
   ],
-  providers: [AuthService,UserProfileService],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   imports: [
     RouterModule,
