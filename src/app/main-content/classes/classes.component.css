@@ -1,0 +1,123 @@
+/* Center the content horizontally */
+.container {
+  text-align: center;
+  margin: 5%;
+}
+.separator {
+  margin: 0 5px; /* Adjust spacing between the links and the separator */
+}
+.schedule-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd; /* Border color and width */
+  padding: 8px; /* Padding inside table cells */
+  text-align: left; /* Align text to the left */
+}
+
+table {
+  color: white;
+}
+#call-to-action {
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+.container[_ngcontent-ng-c2962653043] {
+  text-align: center;
+  margin: 5%;
+  padding: 8%;
+}
+.schedule-table[_ngcontent-ng-c2152182947] th[_ngcontent-ng-c2152182947] {
+  background-color: none;
+}
+.container[_ngcontent-ng-c732402359] {
+  text-align: center;
+  margin: 5%;
+  padding: 5%;
+}
+#call-to-action[_ngcontent-ng-c2660617322] {
+  position: relative;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+user agent stylesheet section {
+  display: block;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+#call-to-action[_ngcontent-ng-c1350346743] {
+  padding: 10%;
+}
+.tabs-content article img {
+  width: 100%; /* Ensures the image fills the width of its container */
+  height: auto; /* Allows the image to maintain its aspect ratio */
+}
+.hidden {
+  display: none;
+}
+.row {
+  padding: 1%;
+}
+.day-links[_ngcontent-ng-c2291941077] {
+  display: flex;
+  gap: 20px;
+  color: wheat;
+}
+*[_ngcontent-ng-c1443117620],
+[_ngcontent-ng-c1443117620]::after,
+[_ngcontent-ng-c1443117620]::before {
+  box-sizing: border-box;
+  padding: 1px;
+  text-decoration: none;
+}
+.card {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+img,
+svg {
+  vertical-align: middle;
+  padding: 7px;
+  color: oranged;
+}
+.card.shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+}
+.sameline {
+  display: flex;
+  text-decoration: none;
+}
+*[_ngcontent-ng-c3998319072],
+[_ngcontent-ng-c3998319072]::after,
+[_ngcontent-ng-c3998319072]::before {
+  /* box-sizing: border-box; */
+  text-decoration: none;
+  padding: 4px;
+}
+.card-title {
+  margin-bottom: var(--bs-card-title-spacer-y);
+  color: var(--bs-card-title-color);
+  cursor: pointer;
+}

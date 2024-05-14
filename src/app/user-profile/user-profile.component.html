@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row">
+    <!-- Image upload section -->
+    <div class="col-md-6 mb-4">
+      <div class="avatar-upload">
+        <!-- Upload image -->
+        <div class="avatar-edit">
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            #fileInput
+            (change)="uploadFile($event)"
+          />
+        </div>
+        <div class="avatar-preview">
+          <!-- Display the uploaded image -->
+          <img
+            id="imagePreview"
+            [src]="imageUrl"
+            *ngIf="imageUrl"
+            alt="Uploaded Image"
+          />
+          <!-- Edit icon -->
+          <div class="avatar-edit-icon" (click)="fileInput.click()">
+            <i class="fas fa-pencil-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User information section -->
+    <div class="col-md-6">
+      <div class="rounded bg-white">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="text-right mb-4">Profile Settings</h4>
+          </div>
+          <!-- Input fields for user information -->
+          <div class="col-md-6">
+            <label class="labels">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              value=""
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="labels">Surname</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Surname"
+              value=""
+            />
+          </div>
+          <div class="col-md-12 mt-3">
+            <label class="labels">Mobile Number</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Phone Number"
+              value=""
+            />
+          </div>
+          <div class="col-md-12 mt-3">
+            <label class="labels">Email ID</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Email ID"
+              value=""
+            />
+          </div>
+          <div class="col-md-6 mt-3">
+            <label class="labels">Country</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Country"
+              value=""
+            />
+          </div>
+          <div class="col-md-6 mt-3">
+            <label class="labels">State/Region</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="State/Region"
+              value=""
+            />
+          </div>
+          <div class="col-md-12 mt-5 text-center">
+            <button class="btn btn-primary profile-button" type="button" (click)="saveProfile()">
+              Save Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

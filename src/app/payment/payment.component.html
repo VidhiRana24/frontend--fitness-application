@@ -1,0 +1,173 @@
+<div class="container" *ngIf="!showPaymentSuccessMessage">
+  <h2>Payment</h2>
+  <form
+    [formGroup]="paymentForm"
+    (ngSubmit)="processPayment()"
+    class="payment-form"
+  >
+    <div class="row">
+      <div class="col-6">
+        <h3>Billing Address</h3>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            formControlName="fullName"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            formControlName="address"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                id="city"
+                formControlName="city"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="zip">Zip Code</label>
+              <input
+                type="text"
+                id="zip"
+                formControlName="zip"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <h3>Payment</h3>
+        <div class="form-group">
+          <label for="cardName">Name on Card</label>
+          <input
+            type="text"
+            id="cardName"
+            formControlName="cardName"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input
+            type="text"
+            id="cardNumber"
+            formControlName="cardNumber"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="expDate">Expiration Date</label>
+              <input
+                type="text"
+                id="expDate"
+                formControlName="expDate"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label  for="cvv">CVV</label>
+              <input
+                type="password"
+                id="cvv"
+                formControlName="cvv"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" formControlName="sameAddress" /> Shipping address
+        same as billing
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Continue to checkout</button>
+  </form>
+</div>
+
+<div
+  class="container"
+  *ngIf="showPaymentSuccessMessage"
+  style="
+    margin: auto; /* Center horizontally */
+    margin-top: 10vh; /* Adjust top margin for vertical centering */
+    background-color: #c5c6c7;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Londrina Solid', cursive;
+    max-height: 200vh;
+    padding-bottom: 20vh;
+  "
+>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+    <button
+      class="btn btn-info me-md-2"
+      type="button"
+      routerLink="/profile"
+      style="border: solid #1f2833; margin: 1vw"
+    >
+      Profile
+    </button>
+    <button
+      class="btn btn-info me-md-2"
+      type="button"
+      routerLink="/packages"
+      style="border: solid #1f2833; margin: 1vw"
+    >
+      Packages
+    </button>
+  </div>
+  <hr style="height: 2px; margin: 1%; padding: 0" />
+  <div
+    class="card text-center shadow-lg"
+    style="margin: 4vw; background-color: #c5c6c7"
+  >
+    <div class="card-header">has been purchased</div>
+    <div class="card-body" style="background-color: whitesmoke">
+      <h2 class="card-title text-success">Payment Successfull</h2>
+      <p class="card-text">Thanks for choosing Hustle Fitness</p>
+      <a routerLink="/schedule" class="btn btn-info">Lets Go &raquo;</a>
+    </div>
+    <div class="card-footer text-muted">Hustle Fitness</div>
+  </div>
+</div>

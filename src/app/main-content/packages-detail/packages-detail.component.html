@@ -1,0 +1,127 @@
+<!-- <div class="fitness-packages">
+  <p class="extended-description">
+    Our fitness packages provide a comprehensive range of options tailored to
+    meet a variety of fitness objectives and personal preferences. Whether
+    you're striving to enhance your strength, increase flexibility, or maintain
+    an active lifestyle, our diverse selection ensures there's a package
+    perfectly suited to your needs. With expertly crafted programs and
+    experienced instructors, you'll find the guidance and support necessary to
+    embark on your fitness journey with confidence and enthusiasm.
+  </p>
+</div> -->
+
+<div class="container" id="zumba-section">
+  <h2>Purchase Packages</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let package of packages">
+      <div class="card">
+        <img
+          class="card-img-top"
+          [src]="package.image"
+          alt="Package Image"
+          routerLink="/payment"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ package.name }}</h5>
+          <p class="card-text">Price: {{ package.price }}</p>
+          <p class="card-text">{{ package.description }}</p>
+          <button
+            routerLink="/payment"
+            (click)="selectPackage(package)"
+            class="btn btn-primary"
+            routerLink="/payment"
+          >
+            Purchase Now!!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="muscle-building-section">
+  <!-- <h2>Purchase Packages</h2> -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let package of packages1">
+      <div class="card">
+        <img
+          class="card-img-top"
+          [src]="package.image"
+          alt="Package Image"
+          routerLink="/payment"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ package.name }}</h5>
+          <p class="card-text">Price: {{ package.price }}</p>
+          <p class="card-text">{{ package.description }}</p>
+          <button
+            routerLink="/payment"
+            (click)="selectPackage(package)"
+            class="btn btn-primary"
+            routerLink="/payment"
+          >
+            Purchase Now!!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="yoga-section">
+  <!-- <h2>Purchase Packages</h2> -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let package of packages2">
+      <div class="card">
+        <img
+          class="card-img-top"
+          [src]="package.image"
+          alt="Package Image"
+          routerLink="/payment"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ package.name }}</h5>
+          <p class="card-text">Price: {{ package.price }}</p>
+          <p class="card-text">{{ package.description }}</p>
+          <button
+            routerLink="/payment"
+            (click)="selectPackage(package)"
+            class="btn btn-primary"
+            routerLink="/payment"
+          >
+            Purchase Now!!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="cardio-section">
+  <!-- <h2>Purchase Packages</h2> -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let package of cardioPackages">
+      <div class="card">
+        <img
+          class="card-img-top"
+          [src]="package.image"
+          alt="Package Image"
+          routerLink="/payment"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ package.name }}</h5>
+          <p class="card-text">Price: {{ package.price }}</p>
+          <p class="card-text">{{ package.description }}</p>
+          <button
+            routerLink="/payment"
+            (click)="selectPackage(package)"
+            class="btn btn-primary"
+            routerLink="/payment"
+          >
+            Purchase Now!!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

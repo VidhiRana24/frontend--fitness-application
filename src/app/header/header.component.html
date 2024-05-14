@@ -1,0 +1,86 @@
+<header class="header-area header-sticky">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <!-- Logo -->
+      <img src="assets/images/tabs-first-icon.png" alt="" />
+      <a class="navbar-brand" routerLink="/"
+        >FITFUSION<em><strong style="color: orangered"> HUB</strong></em></a
+      >
+
+      <!-- Navbar Content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- Nav Links -->
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              routerLink="/home"
+              routerLinkActive="active"
+              id="homeLink"
+              *ngIf!="authService.isLoggedIn()"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about"  *ngIf="authService.isLoggedIn()"  routerLinkActive="active"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/trainer" routerLinkActive="active" *ngIf="authService.isLoggedIn()"
+              >Trainers</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/gallery" routerLinkActive="active" *ngIf="authService.isLoggedIn()"
+              >Gallery</a
+            >
+          </li>
+        
+          <li class="nav-item" *ngIf="authService.isTrainerLoggedIn()">
+            <a class="nav-link" routerLink="/trainer-manage" routerLinkActive="active">User Managemnt</a>
+          </li>
+          <li class="nav-item" *ngIf="authService.isTrainerLoggedIn()">
+            <a class="nav-link" routerLink="/classes-manage" routerLinkActive="active">Classes Managemnt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/classes" routerLinkActive="active" *ngIf="authService.isLoggedIn()"
+              >Classes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/profile"*ngIf="authService.isLoggedIn() || authService.isTrainerLoggedIn()"  routerLinkActive="active"
+              >Profile</a
+            >
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active" *ngIf="authService.isLoggedIn()"
+              >Contact</a
+            >
+          </li>
+
+          
+          <li class="nav-item" *ngIf="authService.isLoggedIn() || authService.isTrainerLoggedIn()">
+            <button class="btn btn-primary" style="background-color: orangered; color: white; border: none;" 
+                    (click)="authService.logout()" 
+                    routerLinkActive="active">
+              Sign out
+            </button>
+          </li>
+          <li class="nav-item" *ngIf="!authService.isLoggedIn() && !authService.isTrainerLoggedIn()">
+            <button class="btn btn-primary" style="background-color: orangered; color: white; border: none;" 
+                    routerLink="/login" 
+                    routerLinkActive="active">
+              Sign In
+            </button>
+          </li>
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

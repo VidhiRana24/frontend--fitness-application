@@ -1,0 +1,71 @@
+.contact-form.card {
+  background-color: white;
+
+  width: 100%;
+  padding: 20px;
+  max-width: 80%; /* Adjust as needed */
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20%;
+}
+.contact-form.card[_ngcontent-ng-c3765393675] {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  max-width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20%;
+}
+
+contact-form card {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.contact-form.card[_ngcontent-ng-c676128301] {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  max-width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20%;
+  height: auto;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: 1%;
+}
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+  background-color: orangered;
+  border: none;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 5px;
+}

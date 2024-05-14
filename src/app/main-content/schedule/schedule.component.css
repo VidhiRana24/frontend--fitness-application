@@ -1,0 +1,44 @@
+.schedule-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 20px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container,
+.container-lg,
+.container-md,
+.container-sm {
+  max-width: 960px;
+  padding: 5%;
+}
+.day-links {
+  display: flex;
+  gap: 20px; /* Adjust the spacing between links */
+  color: orangered;
+  margin-left: 210px;
+  padding: 10px;
+}
+
+.day-links span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.day-links[_ngcontent-ng-c2291941077] {
+  display: flex;
+  gap: 20px;
+  color: orange;
+  margin-left: 100px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 20px;
+}

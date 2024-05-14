@@ -1,0 +1,234 @@
+<!-- Your workout component content goes here -->
+
+<div class="container workout-component">
+  <div class="progress mt-4">
+    <div
+      class="progress-bar"
+      role="progressbar"
+      [attr.aria-valuenow]="progressValue"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      [style.width.%]="progressValue"
+    ></div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination" style="margin-left: 25rem">
+    {{ currentSection }} / {{ totalSections }}
+  </div>
+
+  <a (click)="previousSection()">
+    <strong><i class="fa-solid fa-angles-left"></i></strong>
+  </a>
+
+  <form #goalForm="ngForm" >
+    <ng-container *ngIf="currentSection === 1">
+      <div class="mb-3">
+        <label for="goal" class="form-label">What is your top goal?</label>
+        <div class="card-deck">
+          <div
+            class="card"
+            *ngFor="let goal of goals"
+            [ngClass]="{ selected: goal === selectedGoal }"
+            (click)="selectGoal(goal); nextSection()"
+          >
+            <div class="card-body">
+              <h5 class="card-title">{{ goal.title }}</h5>
+              <p class="card-text">{{ goal.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="currentSection === 2">
+      <div class="mb-3">
+        <label for="fitnessLevel" class="form-label"
+          >What is your current fitness level?</label
+        >
+        <div class="card-deck">
+          <div
+            class="card"
+            *ngFor="let level of fitnessLevels"
+            [ngClass]="{ selected: level === selectedLevel }"
+            (click)="selectLevel(level); nextSection()"
+          >
+            <div class="card-body">
+              <h5 class="card-title">{{ level.title }}</h5>
+              <p class="card-text">{{ level.description }}</p>
+              <input
+                type="radio"
+                [value]="level.value"
+                name="fitnessLevel"
+                id="{{ level.value }}"
+                hidden
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="currentSection === 3">
+      <div class="mb-3">
+        <label for="gender" class="form-label">What is your gender?</label>
+        <div class="card-deck">
+          <div
+            class="card gender-card"
+            *ngFor="let gender of genders"
+            [class.selected]="gender === selectedGender"
+            (click)="selectGender(gender); nextSection()"
+          >
+            <div class="card-body">
+              <h5 class="card-title">{{ gender.title }}</h5>
+              <p class="card-text">{{ gender.description }}</p>
+              <input
+                type="radio"
+                [value]="gender.value"
+                name="gender"
+                id="{{ gender.value }}"
+                hidden
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="currentSection === 4">
+      <div class="mb-3">
+        <div>
+          <label for="age" class="form-label">What is your age?</label>
+
+          <input
+            type="text"
+            class="form-control"
+            id="age"
+            name="age"
+            [(ngModel)]="selectedAge"
+            placeholder="years"
+            required
+          />
+        </div>
+        <br />
+        <button
+          class="btn btn-primary"
+          style="width: 25rem"
+          (click)="selectAge(selectedAge); nextSection()"
+        >
+          Continue
+        </button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="currentSection === 5">
+      <div class="mb-3">
+        <label for="height" class="form-label"
+          >What is your current height?</label
+        >
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            id="height-ft"
+            name="height-ft"
+            [(ngModel)]="selectedHeightFeet"
+            placeholder="Feet"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="weight" class="form-label">What is your weight?</label>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            id="weight"
+            name="weight"
+            [(ngModel)]="selectedWeight"
+            placeholder="Weight in pounds"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Why do we need this?</label>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">
+              Collecting this information helps tailor workout plans and
+              calculate your BMI accurately.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="btn btn-primary"
+        style="width: 25rem"
+        (click)="selectHeight(selectedHeightFeet); nextSection()"
+      >
+        Continue
+      </button>
+    </ng-container>
+
+    <ng-container *ngIf="currentSection === 6">
+      <div class="mb-3">
+        <label for="workoutFrequency" class="form-label"
+          >How many times do you workout per week?</label
+        >
+        <div class="mb-3">
+          <div class="row">
+            <!-- Loop through workout frequency options -->
+            <div class="workout-frequencies">
+              <div
+                class="workout-frequency"
+                *ngFor="let frequency of workoutFrequencies"
+                [class.selected]="frequency.value === selectedWorkoutFrequency"
+                (click)="selectWorkoutFrequency(frequency.value); nextSection()"
+              >
+                {{ frequency.label }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="currentSection === 7">
+      <div class="mb-3">
+        <label for="workoutLocation" class="form-label"
+          >Where do you typically workout?</label
+        >
+        <div class="card-deck">
+          <div
+            class="card"
+            *ngFor="let location of workoutLocations"
+            [class.selected]="location === selectedWorkoutLocation"
+            (click)="selectWorkoutLocation(location)"
+          >
+            <div class="card-body">
+              <h5 class="card-title">{{ location.title }}</h5>
+              <p class="card-text">{{ location.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Navigation buttons -->
+
+    <button
+      *ngIf="currentSection === 7"
+      type="submit"
+      class="btn btn-primary"
+      (click)="onSubmit1(goalForm)"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+<router-outlet></router-outlet>

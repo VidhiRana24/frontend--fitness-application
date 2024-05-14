@@ -1,0 +1,13 @@
+col-lg-12 {
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 5%;
+}
+.text-center text-lg-start bg-body-tertiary text-muteda:hover {
+  color: orange; /* Change the color to orange when hovered */
+}
+.text-reset {
+  --bs-text-opacity: 1;
+  color: inherit !important;
+  text-decoration: none;
+}

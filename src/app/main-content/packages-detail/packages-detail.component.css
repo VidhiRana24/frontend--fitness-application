@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+container[_ngcontent-ng-c577066105] {
+  padding: 5px 20px 15px 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196f3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Updated box-shadow */
+  transition: 0.7s;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.19); /* Shadow on hover */
+}
+.package-card {
+  height: 300px; /* Set the desired height for the image container */
+}
+
+.package-card img {
+  max-height: 100%; /* Ensure the image fills the container height */
+  max-width: 100%; /* Ensure the image scales proportionally */
+  object-fit: cover; /* Cover the entire container without stretching */
+}
+.card {
+  height: 100%; /* Make sure the card occupies the full height of its container */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px; /* Adjust the height of the image as needed */
+  object-fit: cover; /* Ensure the image covers the entire space */
+}
+
+.card-body {
+  height: calc(
+    100% - 200px
+  ); /* Subtract the height of the image to fit the remaining content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  flex-grow: 1; /* Allow the text to expand to fill the available space */
+}
+
+.btn {
+  width: 100%;
+}
+
+.h2,
+h2 {
+  font-size: 2rem;
+  padding: 10px;
+}
+[_ngcontent-ng-c4275367184] {
+  box-sizing: border-box;
+  padding: 3px;
+  border-radius: 5px;
+}
+[_ngcontent-ng-c4275367184][_ngcontent-ng-c4275367184] {
+  box-sizing: border-box;
+  padding: 3px;
+  border-radius: 10px;
+}
+.card[_ngcontent-ng-c4275367184] {
+  height: 100%;
+  border-radius: 20px;
+}
+.card {
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.card:hover {
+  transform: scale(1.1); /* Scale the card on hover */
+}
+col-md-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  padding: 70px;
+}
+.btn[_ngcontent-ng-c4176590084] {
+  width: 100%;
+  background-color: orangered;
+}

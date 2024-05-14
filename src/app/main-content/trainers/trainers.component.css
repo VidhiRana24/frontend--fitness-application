@@ -1,0 +1,27 @@
+.card trainer-card {
+  -webkit-box-flex-group: 10px 10px 10px 10px whitesmoke;
+}
+.section {
+  padding: 5%;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 20px;
+}
+.trainer-card:hover {
+  transform: scale(1.1); /* Increase the scale for the hover effect */
+
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+img,
+svg {
+  vertical-align: middle;
+  border-radius: 200px;
+}
+.h4,
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+  margin-left: 50px;
+}

@@ -1,0 +1,85 @@
+.avatar-upload {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.avatar-edit input {
+  display: none;
+}
+
+.avatar-preview {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.avatar-edit {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 35px;
+
+  border-radius: 50%;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.avatar-edit:hover {
+  background-color: #0056b3;
+}
+/* Add this CSS to your component's CSS file */
+
+.avatar-preview img {
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  object-position: center; /* Center the image */
+}
+.avatar-edit-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: orangered;
+}
+
+.avatar-edit-icon:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.avatar-edit-icon i {
+  color: #fff;
+}
+.avatar-preview {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.col-md-6 {
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important; /* Adjust margin bottom for image upload section */
+}
